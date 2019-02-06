@@ -1,0 +1,74 @@
+body {
+    background-color:gray;
+    color:white;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+
+nav a {
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: blue;
+}
+
+nav a:hover {
+    border-bottom:2px orange solid;
+    font-size: 2em;
+    transition: .9s;
+    font-weight: bold;
+}
+
+footer {
+    clear: left; 
+}
+
+#indexImg, #overview {
+    float:left;
+}
+
+#signs, #signsImg {
+    float: left;
+}
+
+#types, #typesImg {
+    float: left;
+}
+
+#overview, #signs, #types {
+    text-align: left;
+}
+
+footer {
+    color: black;
+    font-size: 0.9em;
+}
+
+#indexImg, #signsImg, #typesImg {
+    padding-left: 250px;
+}
+
+#overview {
+    padding-top: 50px
+}
+
+.indent {
+    text-indent: 50px;
+}
+
+.sol {
+    border-radius: 50%;
+}
+
+#typesImg {
+    padding-top: 30px;
+}

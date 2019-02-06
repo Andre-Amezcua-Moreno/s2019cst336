@@ -1,0 +1,20 @@
+Description for the two "new" HTML tags and CSS properties you used (not used in Lab 1)
+Screenshots of the HTML validation of each page
+
+CSS Properties:
+1. I used the border-radius property on an image to make it round.
+    .sol {
+    border-radius: 50%;
+    }
+2. I used the text-indent property to indent some text in the website.
+    .indent {
+    text-indent: 50px;
+    }
+    
+HTML Tags:
+1. <u> tag
+    I used it to underline the current website.
+2. <b> tag
+    Works like strong, makes the text bold.
+3. <big> tag
+    Makes the text slightly bigger.
