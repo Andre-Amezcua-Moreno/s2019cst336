@@ -11,6 +11,8 @@ h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4em;
     margin-bottom: 0px;
+    color: red;
+    letter-spacing: 6px;
 }
 
 nav a {
@@ -50,7 +52,6 @@ footer {
 
 footer {
     color: black;
-    font-size: 0.9em;
 }
 
 #indexImg, #signsImg, #typesImg {
@@ -71,4 +72,8 @@ footer {
 
 #typesImg {
     padding-top: 30px;
+}
+
+footer {
+    font-size: 0.9em;
 }
