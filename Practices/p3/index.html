@@ -27,6 +27,7 @@
         <div id="image1"></div>
         <div id="image2"></div>
         <div id="image3"></div>
+        <div id ="total"></div>
         
         <div id="buttons">
             <button class="play" type="button"> Play</button>
@@ -34,9 +35,11 @@
         
         <script src="https://code.jquery.com/jquery.min.js"></script>
         <script type="text/javascript">
-        
-       <script>
-            
+            var cherries = 100;
+            var grapes = 300;
+            var sevens = 500;
+            var total = 0;
+    
             $("button.play").on("click", function(){
                    let imageArray = ["cherry", "grapes", "seven"];
                     let randomIndex = Math.floor(Math.random()*3);
@@ -50,13 +53,11 @@
                     let randomIndex3 = Math.floor(Math.random()*3);
                     let randomImage3 = imageArray[randomIndex3];
                      $("#image3").html("<img src='img/"+randomImage3+".png' />")
+                     
+                     
+                     
                  });
-            $("document").ready(function(){
-                var cherries = 100;
-                var grapes = 300;
-                var sevens = 500;
-                var total
-            })
+            
                  
             
         </script>
