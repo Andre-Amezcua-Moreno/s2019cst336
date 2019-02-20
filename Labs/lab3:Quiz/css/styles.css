@@ -1,0 +1,61 @@
+header, #boton{
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: red;
+    letter-spacing: 6px;
+}
+
+body{
+    background-image: url("../img/harryPotter.png");
+    background-size: cover;
+}
+
+form{
+    color: white;
+    padding: 10px;
+}
+
+#options{
+    padding-left: 50px;
+}
+
+.question2, #image2 {
+    display: inline-block;
+}
+
+.question1, #image1 {
+    display: inline-block;
+}
+
+.question3, #image3 {
+    display: inline-block;
+}
+
+.question4, #image4 {
+    display: inline-block;
+}
+
+.question5, #image5 {
+    display: inline-block;
+}
+
+.question6, #image6 {
+    display: inline-block;
+}
+
+#first3, #other3 {
+    display: inline-block;
+}
+
+#r1, #r2, #r3, #r4, #r5, #r6 {
+    padding-left: 350px;
+}
+
+#score, #congratulatoryMSG{
+    display: inline-block
+}
