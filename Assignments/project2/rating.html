@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Project 2</title>
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    </head>
+
+    <body id="rt">
+        <header>
+            <h1>RATE THIS WEBSITE</h1>
+        </header>
+        <nav>
+            <hr />
+            <a href="index.html">Home</a>
+            <a href="books.html">BOOKS</a>
+            <a href="trivia.html">TRIVIA</a>
+            <a href="rating.html"><strong><u>RATING</u></strong></a>
+        </nav>
+
+        
+        <form>
+            <div id="think">What do you think about THE LORD OF THE RINGS?</div>
+
+            <form>
+              <textarea name="message" id="box" rows="10" cols="30"></textarea>
+              
+            </form>
+            
+            <div class="rate">
+                
+                <label for="feedback"> HOW MANY START WOULD YOU GIVE THIS SITE? </label>
+                <br>
+                
+                <div class='circles'>
+                    <input type="radio" id="r1" name="option" value="1">
+                    <label for="r1">1</label>
+                </div>
+                
+                <div class='circles'>
+                    <input type="radio" id="r2" name="option" value="2">
+                    <label for="r2">2</label>
+                </div>
+                    
+                <div class='circles'>
+                    <input type="radio" id="r3" name="option" value="3">
+                <label for="r3">3</label>
+                </div>
+                
+                <div class='circles'>
+                    <input type="radio" id="r4" name="option" value="4">
+                    <label for="re4">4</label>
+                </div>
+                
+                <div class='circles'>
+                    <input type="radio" id="r5" name="option" value="5">
+                    <label for="r5">5</label>
+                </div>
+                
+                <div>
+                    <button class="checker" type="button">SUBMIT</button>
+                </div>
+            
+            </div>
+            
+        </form>
+        
+        <div id="result"></div>
+        
+         <script SRC="js/functions.js"></script>
+        
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            $("button.checker").on("click", function(e){
+                
+                $("#result").html("THANK YOU!!").css("color", "purple").css("font-size", "40px");
+                
+            });
+        
+        </script>
+        
+    </body>
+ 
+</html>

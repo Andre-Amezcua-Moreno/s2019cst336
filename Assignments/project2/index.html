@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Project 2</title>
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    </head>
+
+    <body id="idx">
+        <header>
+            <h1>THE LORD OF THE RINGS</h1>
+        </header>
+        <nav>
+            <hr />
+            <a href="index.html"><strong><u>Home</u></strong></a>
+            <a href="books.html">BOOKS</a>
+            <a href="trivia.html">TRIVIA</a>
+            <a href="rating.html">RATING</a>
+        </nav>
+
+        
+        <main>
+            
+            <h2>How Have You Heard of The Lord of the Rings?</h2>
+
+            <form id="checkOpts">
+              <input type="checkbox" name="1" value="books"> Books<br>
+              <input type="checkbox" name="2" value="movies"> Movies<br>
+              <input type="checkbox" name="3" value="never"> Never heard of it<br>
+              <input type="checkbox" name="3" value="heard"> Heard but haven't read the books or saw the movies<br><br>
+              
+            </form>
+            
+            <div id="expDiv">
+                <button type="button" class="exp">SUBMIT</button>
+            </div>
+            
+            <div id="resultIndex"></div>
+            
+        </main>
+        
+         <script SRC="js/functions.js"></script>
+        
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            $("button.exp").on("click", function(e){
+                
+                $("#resultIndex").html("AWESOME!! Please Continue").css("color", "orange").css("font-size", "40px");
+                
+            });
+        
+        </script>
+    </body>
+ 
+</html>

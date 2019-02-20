@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Project 2</title>
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    </head>
+    <body id="tv">
+        <header>
+            <h1>THE LORD OF THE RINGS QUIZ</h1>
+        </header>
+        
+        <nav>
+            <hr />
+            <a href="index.html">Home</a>
+            <a href="books.html">BOOKS</a>
+            <a href="trivia.html"><strong><u>TRIVIA</u></strong></a>
+            <a href="rating.html">RATING</a>
+        </nav>
+        
+        <main id='mainTriv'>
+            
+            <form id='fistname'>
+                <label for="guessField">Enter your Name:</label>
+                <input  name="firstname" type="text" id="guessField" class="guessField">
+            </form>
+            
+            <form id='f1'>
+                <div class="question1">
+                    <label for="feedback"> 1. We all know that Boromir dies saving two of our favorite hobbits. But which book does he die in?? </label>
+                    
+                    <div id='options'>
+                        <input type="radio" id="1opt1" name="choice1" value="one1">
+                        <label for="1opt1">THE FELLOWSHIP OF THE RING</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="1opt2" name="choice1" value="one2">
+                        <label for="1opt2">THE TWO TOWERS</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="1opt3" name="choice1" value="one3">
+                        <label for="1opt3">THE RETURN OF THE KING</label>
+                    </div>
+                </div>
+                <div id="r1"></div>
+            </form>    
+            
+            <form id='f2'>   
+                <div class="question2">
+                    <label for="feedback">2. After Sauron, who held the One Ring? </label>
+                    
+                    <div id='options'>
+                        <input type="radio" id="2opt1" name="choice2" value="two1">
+                        <label for="2opt1">ELROND</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="2opt2" name="choice2" value="two2">
+                        <label for="2opt2">ISILDUR</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="2opt3" name="choice2" value="two3">
+                        <label for="2opt3">GOLLUM</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="2opt4" name="choice2" value="two4">
+                        <label for="2opt4">FRODO</label>
+                    </div>
+                </div>
+                <div id="r2"></div>
+            </form>    
+            
+            <form id='f3'>    
+                <div class="question3">
+                    <label for="feedback">3. Where is Legolas from? </label>
+                    
+                    <div id='options'>
+                        <input type="radio" id="3opt1" name="choice3" value="three1">
+                        <label for="3opt1">FANGORN FOREST</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="3opt2" name="choice3" value="three2">
+                        <label for="3opt2">RIVENDELL</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="3opt3" name="choice3" value="three3">
+                        <label for="3opt3">LOTHLORIAN</label>
+                    </div>
+                    <div id='options'>
+                        <input type="radio" id="3opt4" name="choice3" value="three4">
+                        <label for="3opt4">MIRKWOOD</label>
+                    </div>
+                </div>
+                <div id="r3"></div>
+            </form>    
+             
+             
+                <div id="boton">
+                    <button class="checker" type="button">Submit</button>
+                </div>
+                
+                <div id="score"></div>
+                <div id="congratulatoryMSG"></div>
+        </main>
+        
+        
+        <script SRC="js/functions.js"></script>
+        
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+            var ans1 = "one1";
+            var ans2 = "two1";
+            var ans3 = "three2";
+        
+            $("button.checker").on("click", function(e){
+                var answer1 = $("input[name='choice1']:checked").val();
+                var answer2 = $("input[name='choice2']:checked").val();
+                var answer3 = $("input[name='choice3']:checked").val();
+                
+                var corrCount = 0;
+                var totalScore = 0;
+                
+                if(answer1 === ans1) {
+                    $("#r1").html("Correct").css("color", "green");
+                    corrCount++;
+                }else{
+                    $("#r1").html("Incorrect").css("color", "red");
+                }
+                
+                if(answer2 === ans2) {
+                    $("#r2").html("Correct").css("color", "green");
+                    corrCount++;
+                }else{
+                    $("#r2").html("Incorrect").css("color", "red");
+                }
+                
+                if(answer3 === ans3) {
+                    $("#r3").html("Correct").css("color", "green");
+                    corrCount++;
+                }else{
+                    $("#r3").html("Incorrect").css("color", "red");
+                }
+                
+                totalScore = (corrCount/3) * 100;
+                $("#score").html("Total Score: " + totalScore + "%").css("color", "white").css("font-size", "40px");
+                
+                if(totalScore>=90){
+                    $("#congratulatoryMSG").html("CONGRATULATIONS!!! YOU ARE A LORD OF THE RINGS EXPERT").css("color", "orange").css("font-size", "60px");
+                }
+                //console.log("selected: ", answer1);
+                //console.log("right: ", ans1);
+                
+                //console.log("id ", selectorRadioId);
+                console.log("name ", name);
+            });
+        
+        </script>
+
+    </body>
+</html>

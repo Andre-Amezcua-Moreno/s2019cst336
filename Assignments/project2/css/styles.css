@@ -1,0 +1,134 @@
+h1 {
+    font-family: 'Pacifico';
+    font-size: 4em;
+    margin-bottom: 0px;
+    color: red;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+}
+
+nav a {
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 3em;
+    text-decoration: none;
+    color: #F943ED;
+}
+
+nav a:hover {
+    border-bottom:2px orange solid;
+    font-size: 2em;
+    transition: .9s;
+    font-weight: bold;
+}
+
+#idx{
+    background-image: url("../img/index.png");
+    background-size: cover;
+}
+
+#rt{
+    background-image: url("../img/rate.png");
+    background-size: cover;
+}
+
+#bk{
+    background-image: url("../img/books.png");
+    background-size: cover;
+}
+
+#tv{
+    background-image: url("../img/trivia.png");
+    background-size: cover;
+}
+
+h2{
+    padding-top: 100px;
+    color: #D00A0A;
+    text-align: center;
+    font-size: 50px;
+}
+
+#checkOpts{
+    color: white;
+    padding-left: 600px;
+    font-size: 30px;
+}
+
+#expDiv{
+    text-align: center;
+}
+
+#mainTriv{
+    color: white;
+}
+
+#f1, #f2, #f3{
+    padding-left: 400px;
+}
+
+#options{
+    text-indent: 50px;
+}
+
+#boton{
+    text-align: center;
+}
+
+#r1, #r2, #r3 {
+   text-indent: 100px;
+   font-size: 20px;
+}
+
+.rate{
+    text-align: center;
+    color: blue;
+    font-size: 2em;
+}
+
+#think{
+    color: blue;
+    font-size: 2em;
+}
+
+.circles{
+    display: inline-block;
+}
+
+#result{
+    padding-top: 50px;
+    text-align: center;
+}
+
+#book1, #book2, #book3{
+    text-align: center;
+    display: inline-block;
+    color: #D00A0A;
+    font-size: 1.2em;
+}
+
+.caption{
+    color: #D00A0A;
+    background-color: white;
+    font-size: 1.2em;
+}
+
+#book1{
+    padding-left: 100px;
+}
+
+#botonBooks{
+    text-align: center;
+}
+
+#bookMsg{
+    padding-left: 400px;
+}
+
+#resultIndex{
+    text-align: center;
+}

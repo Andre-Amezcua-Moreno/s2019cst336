@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>Project 2</title>
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    </head>
+
+    <body id="bk">
+        <header>
+            <h1>THE LORD OF THE RINGS BOOKS</h1>
+        </header>
+        <nav>
+            <hr />
+            <a href="index.html">Home</a>
+            <a href="books.html"><strong><u>BOOKS</u></strong></a>
+            <a href="trivia.html">TRIVIA</a>
+            <a href="rating.html">RATING</a>
+        </nav>
+
+        
+        <main>
+            <div id="book1">
+                <figure id="img1">
+                    <img src="img/b1.png" alt="Picture of the book" />
+                    <figcaption class="caption"><a href="https://www.imdb.com/title/tt0120737/">BOOK 1: The Fellowship of the Ring</a></figcaption>
+                </figure>
+                
+                <form>
+                <label for="feedback">Have you read this book?</label>
+                  <select name="seen1">
+                    <option value="select">SELECT</option>
+                    <option value="y">Yes</option>
+                    <option value="n">No</option>
+                  </select>
+                
+                </form>
+            </div>
+            
+            <div id="book2">
+                <figure id="img2">
+                    <img src="img/b2.png" alt="Picture of the book" />
+                    <figcaption class="caption"><a href="https://www.imdb.com/title/tt0167261/">BOOK 2: The Two Towers</a></figcaption>
+                </figure>
+                
+                <form>
+                    <label for="feedback">Have you read this book?</label>
+                  <select name="seen2">
+                      <option value="select">SELECT</option>
+                    <option value="y">Yes</option>
+                    <option value="n">No</option>
+                  </select>
+                
+                </form>
+            </div>
+            
+            <div id="book3">
+                <figure id="img3">
+                    <img src="img/b3.png" alt="Picture of the book" />
+                    <figcaption class="caption"><a href="https://www.imdb.com/title/tt0167260/">BOOK 3: The Return of the King</a></figcaption>
+                </figure>
+                
+                <form>
+                  <label for="feedback">Have you read this book?</label>
+                  <select name="seen3">
+                    <option value="select">SELECT</option>
+                    <option value="y">Yes</option>
+                    <option value="n">No</option>
+                  </select>
+                
+                </form>
+            </div>
+            
+            <div id="botonBooks">
+                <button class="checking" type="button">Submit</button>
+            </div>
+            
+            <div id="bookMsg"></div>
+            
+        </main>
+        
+        <script SRC="js/functions.js"></script>
+        
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+        
+            $("button.checking").on("click", function(e){
+                
+                
+                $("#bookMsg").html("THEY ARE GREAT BOOKS!!").css("color", "orange").css("font-size", "60px")
+                
+            });
+        
+        </script>
+        
+    </body>
+ 
+</html>
