@@ -1,0 +1,133 @@
+<html>
+<head>
+    <title>Shopping Cart</title>
+</head>
+
+<body>
+    <h1> Spring Break Shopping  </h1>
+
+    <table>
+    <tr>
+        <th>Product</th>
+        <th>Unit <br> Price</th>
+        <th> Quantity </th>
+        <th>Total</th>
+    </tr>
+    <tr>
+        <td>Microfiber Beach Towel</td>
+        <td>$30</td>
+        <td><input type="text" id="textT" size="5"></td>
+        <td id="towelTotal"></td>
+    </tr>
+
+   <tr>
+        <td>Sunscreen 100SPF, 120ml</td>
+        <td>$10</td>
+        <td><input type="text" id="textS" size="5"></td>
+        <td id="sunTotal"></td>
+    </tr>    
+    
+    <tr>
+        <td>Ipanema Flip-flop Sandals </td>
+        <td>$20</td>
+        <td><input type="text" id="textSand" size="5"></td>
+        <td id="sandTotal"></td>
+    </tr>
+
+   <tr>
+        <td>Shipping</td>
+        <td></td>
+        <td></td>
+        <td id="shipping"></td>
+    </tr>    
+        
+    <tr>
+        <td>Subtotal</td>
+        <td></td>
+        <td></td>
+        <td id="subtotal"></td>
+    </tr>             
+        
+    <tr>
+        <td>Tax (10%)</td>
+        <td></td>
+        <td></td>
+        <td id="tax"></td>
+    </tr>
+    
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td id="total"></td>
+    </tr>
+       
+    </table>
+    
+    <h3>Shipping & Handling</h3>
+    <select class="shipping">
+        <option value="">Select one</option>
+        <option value="15">Next-day Delivery: $15.00</option>
+        <option value="10">Three-day Delivery: $10.00</option>
+        <option value="5">Regular (5-8 days): $5.00</option>
+    </select>
+    
+    <br><br>
+    
+    <button class="cal">Recalculate Total</button>
+    
+    <br><br>
+
+        
+    <span>I accept the terms of this purchase.</span>
+    <br> 
+    
+    <button>CONFIRM PURCHASE</button>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+        var tT;
+        var sT;
+        var sandT;
+        var subTotal = 0;
+        var tax = 0.10;
+        var taxTotal;
+        
+        $("#textT").change(function(){
+            tT = parseInt($("#textT").val())*30;
+            $("#towelTotal").html(tT);
+            subTotal += tT;
+        });
+        
+        $("#textS").change(function(){
+            sT = parseInt($("#textS").val())*10;
+            $("#sunTotal").html(sT);
+            subTotal += sT;
+        });
+    
+        $("#textSand").change(function(){
+            sandT = parseInt($("#textSand").val())*20;
+            $("#sandTotal").html(sandT);
+            subTotal += sandT;
+        });
+        
+        $(document).ready(function(){
+            $("select.shipping").change(function(){
+            var shipping = $(this).children("option:selected").val();
+            //if(shipping = c1)
+            $("#shipping").html(shipping);
+             });
+            
+        });
+        
+        $("button.cal").on("click", function(e){
+            $("#subtotal").html(subTotal);
+            taxTotal = parseFloat(subTotal * tax);
+            $("#tax").html(taxTotal);
+            $("#total").html( subTotal + taxTotal);
+        });
+        
+    </script>
+
+</body>
+</html>
