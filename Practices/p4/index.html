@@ -25,8 +25,8 @@
         <td>$10</td>
         <td><input type="text" id="textS" size="5"></td>
         <td id="sunTotal"></td>
-    </tr>    
-    
+    </tr>
+
     <tr>
         <td>Ipanema Flip-flop Sandals </td>
         <td>$20</td>
@@ -39,94 +39,99 @@
         <td></td>
         <td></td>
         <td id="shipping"></td>
-    </tr>    
-        
+    </tr>
+
     <tr>
         <td>Subtotal</td>
         <td></td>
         <td></td>
         <td id="subtotal"></td>
-    </tr>             
-        
+    </tr>
+
     <tr>
         <td>Tax (10%)</td>
         <td></td>
         <td></td>
         <td id="tax"></td>
     </tr>
-    
+
     <tr>
         <td>Total</td>
         <td></td>
         <td></td>
         <td id="total"></td>
     </tr>
-       
+
     </table>
-    
+
     <h3>Shipping & Handling</h3>
-    <select class="shipping">
+    <select class ="shipping">
         <option value="">Select one</option>
-        <option value="15">Next-day Delivery: $15.00</option>
-        <option value="10">Three-day Delivery: $10.00</option>
-        <option value="5">Regular (5-8 days): $5.00</option>
+        <option value="c1">Next-day Delivery: $15.00</option>
+        <option value="c2">Three-day Delivery: $10.00</option>
+        <option value="c3">Regular (5-8 days): $5.00</option>
     </select>
-    
-    <br><br>
-    
-    <button class="cal">Recalculate Total</button>
-    
+
     <br><br>
 
-        
+    <button class="cal">Recalculate Total</button>
+
+    <br><br>
+
+
     <span>I accept the terms of this purchase.</span>
-    <br> 
-    
+    <br>
+
     <button>CONFIRM PURCHASE</button>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript">
-        
+
         var tT;
         var sT;
         var sandT;
         var subTotal = 0;
-        var tax = 0.10;
+        var tax = .10;
         var taxTotal;
-        
+
         $("#textT").change(function(){
             tT = parseInt($("#textT").val())*30;
             $("#towelTotal").html(tT);
             subTotal += tT;
         });
-        
+
         $("#textS").change(function(){
             sT = parseInt($("#textS").val())*10;
             $("#sunTotal").html(sT);
             subTotal += sT;
         });
-    
+
         $("#textSand").change(function(){
             sandT = parseInt($("#textSand").val())*20;
             $("#sandTotal").html(sandT);
             subTotal += sandT;
         });
-        
         $(document).ready(function(){
             $("select.shipping").change(function(){
             var shipping = $(this).children("option:selected").val();
-            //if(shipping = c1)
-            $("#shipping").html(shipping);
+            var s;
+            if(shipping === "c1")
+                s = 15;
+            else if(shipping === "c2")
+                s = 10;
+            else
+                s = 5;
+
+            subTotal += s;
+            $("#shipping").html(s);
              });
-            
         });
-        
         $("button.cal").on("click", function(e){
-            $("#subtotal").html(subTotal);
-            taxTotal = parseFloat(subTotal * tax);
-            $("#tax").html(taxTotal);
-            $("#total").html( subTotal + taxTotal);
-        });
-        
+           $("#subtotal").html(subTotal);
+           taxTotal = parseFloat((subTotal) * tax);
+           $("#tax").html(taxTotal);
+           $("#total").html( subTotal + taxTotal);
+       });
+
     </script>
 
 </body>
