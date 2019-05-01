@@ -37,7 +37,7 @@ function processForm(){
 <body>
     <div class="container">
         <div class="col-md-3">
-            <form>
+            <form method="POST" enctype="multipart/form-data">
                 <div style="display:none;">
                     <input type="file" multiple name="fileName[]" />
                 </div>
